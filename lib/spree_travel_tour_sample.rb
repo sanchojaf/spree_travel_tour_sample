@@ -19,7 +19,8 @@ module SpreeTravelTourSample
 #      Spree::TravelTourSample.load_travel_tour_sample("properties_rent_a_car")
       Spree::TravelTourSample.load_travel_tour_sample("properties_tour")
 #      Spree::TravelTourSample.load_travel_tour_sample("properties_transfer")
-
+      Spree::TravelTourSample.load_travel_tour_sample("shipping_categories")  
+      Spree::TravelTourSample.load_travel_tour_sample("products")  
       Spree::TravelTourSample.load_travel_tour_sample("taxonomy_categories")      
       Spree::TravelTourSample.load_travel_tour_sample("taxon_category")
 
@@ -40,9 +41,9 @@ module SpreeTravelTourSample
 #      Spree::TravelTourSample.load_travel_tour_sample("taxons_thing_to_do")      
 
       #temporal because shipping category is a required field to Product model
-      Spree::TravelTourSample.load_travel_tour_sample("shipping_categories")       
+     
 
-      Spree::TravelTourSample.load_travel_tour_sample("products")  
+
       Spree::TravelTourSample.load_travel_tour_sample("product_properties")
       Spree::TravelTourSample.load_travel_tour_sample("product_option_types")    
 
