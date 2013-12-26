@@ -6,7 +6,7 @@ versions = yaml['gems']
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_travel_sample'
+  s.name        = 'spree_travel_tour_sample'
   s.version     = versions['spree_travel']
   s.summary     = 'Spree Travel Tour Sample'
   s.description = 'Load sample tour data'
