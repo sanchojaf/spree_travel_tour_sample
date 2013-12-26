@@ -1,4 +1,4 @@
-Spree::Sample.load_sample("option_types")
+#Spree::Sample.load_sample("option_types")
 
 size = Spree::OptionType.find_by_presentation!("Size")
 color = Spree::OptionType.find_by_presentation!("Color")

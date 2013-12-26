@@ -16,16 +16,22 @@ module SpreeTravelTourSample
       Spree::TravelTourSample.load_travel_tour_sample("tax_rates")
 
       Spree::TravelTourSample.load_travel_tour_sample("products")
+
        Spree::TravelTourSample.load_travel_tour_sample("taxonomy_categories") 
       Spree::TravelTourSample.load_travel_tour_sample("taxon_category")
+
+      Spree::TravelTourSample.load_travel_tour_sample("option_types")
       Spree::TravelTourSample.load_travel_tour_sample("option_values")
+
       Spree::TravelTourSample.load_travel_tour_sample("product_option_types")
       Spree::TravelTourSample.load_travel_tour_sample("product_properties")
       Spree::TravelTourSample.load_travel_tour_sample("properties_tour")
+
       Spree::TravelTourSample.load_travel_tour_sample("variants")
       Spree::TravelTourSample.load_travel_tour_sample("stock")
       Spree::TravelTourSample.load_travel_tour_sample("assets")
 
+      Spree::TravelTourSample.load_travel_tour_sample("addresses")
       Spree::TravelTourSample.load_travel_tour_sample("orders")
       Spree::TravelTourSample.load_travel_tour_sample("adjustments")
       Spree::TravelTourSample.load_travel_tour_sample("payments")

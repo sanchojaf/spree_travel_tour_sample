@@ -1,5 +1,5 @@
-Spree::Sample.load_sample("products")
-Spree::Sample.load_sample("variants")
+#Spree::Sample.load_sample("products")
+#Spree::Sample.load_sample("variants")
 
 products = {}
 
