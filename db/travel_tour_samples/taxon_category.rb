@@ -1,162 +1,332 @@
 #encoding: utf-8
 categories = Spree::Taxonomy.find_by_name!("Categories")
-taxons = [
- {
-  name: 'categories',
-  taxonomy: categories,
-  permalink: 'categories',
-  position: 0 
- },
- {
-  name: 'Adventure',
-  taxonomy: categories,
-  permalink: 'categories/adventure',
-  position: 1
- },
- {
-  name: 'Sport',
-  taxonomy: categories,
-  permalink: 'categories/adventure/sport',
-  position: 2
- },
- {
-  name: 'Backcountry Skiing',
-  taxonomy: categories,
-  permalink: 'categories/adventure/sport/backcountry_skiing',
-  position: 3
- },
- {
-  name: 'Surfing',
-  taxonomy: categories,
-  permalink: 'categories/adventure/sport/surfing',
-  position: 3
- },
- {
-  name: 'Swimming',
-  taxonomy: categories,
-  permalink: 'categories/adventure/sport/swimming',
-  position: 3
- },
- {
-  name: 'Waterskiing',
-  taxonomy: categories,
-  permalink: 'categories/adventure/sport/waterskiing',
-  position: 3
- },
- {
-  name: 'Sailing',
-  taxonomy: categories,
-  permalink: 'categories/adventure/sport/sailing',
-  position: 3
- },
- {
-  name: 'Wakeboarding',
-  taxonomy: categories,
-  permalink: 'categories/adventure/sport/wakeboarding',
-  position: 3
- },
- {
-  name: 'Mountain Biking',
-  taxonomy: categories,
-  permalink: 'categories/adventure/sport/mountain_biking',
-  position: 3
- },
- {
-  name: 'Boat Excursion',
-  taxonomy: categories,
-  permalink: 'categories/adventure/boat_excursion',
-  position: 2
- },
- {
-  name: 'Desert Excursion',
-  taxonomy: categories,
-  permalink: 'categories/adventure/desert_excursion',
-  position: 2
- },
- {
-  name: 'Fishing',
-  taxonomy: categories,
-  permalink: 'categories/adventure/fishing',
-  position: 2
- },
- {
-  name: 'Hiking',
-  taxonomy: categories,
-  permalink: 'categories/adventure/hiking',
-  position: 2
- },
- {
-  name: 'Hunting',
-  taxonomy: categories,
-  permalink: 'categories/adventure/hunting',
-  position: 2
- },
- {
-  name: 'Safari',
-  taxonomy: categories,
-  permalink: 'categories/adventure/safari',
-  position: 2
- },
- {
-  name: 'Scuba Diving',
-  taxonomy: categories,
-  permalink: 'categories/adventure/scuba_diving',
-  position: 2
- },
- {
-  name: 'Recreation',
-  taxonomy: categories,
-  permalink: 'categories/recreation',
-  position: 1
- },
- {
-  name: 'Dancing',
-  taxonomy: categories,
-  permalink: 'categories/recreation/dancing',
-  position: 2
- },
-{
-  name: 'Sightseeing',
-  taxonomy: categories,
-  permalink: 'categories/recreation/sightseeing',
-  position: 2
- },
- {
-  name: 'Relaxation',
-  taxonomy: categories,
-  permalink: 'categories/relaxation',
-  position: 1
- },
- {
-  name: 'Tai Chi',
-  taxonomy: categories,
-  permalink: 'categories/relaxation/tai_chi',
-  position: 2
- },
-{
-  name: 'Yoga',
-  taxonomy: categories,
-  permalink: 'categories/relaxation/yoga',
-  position: 2
- },
- {
-  name: 'Reiki',
-  taxonomy: categories,
-  permalink: 'categories/relaxation/reiki',
-  position: 2
- },
- {
-  name: 'Pilates',
-  taxonomy: categories,
-  permalink: 'categories/relaxation/pilates',
-  position: 2
- }
-]    
 
-     
-taxons.each do |taxon_attrs|
-  taxon = Spree::Taxon.find_or_create_by_permalink(taxon_attrs[:permalink])
-  taxon.taxonomy = taxon_attrs[:taxonomy]
-  taxon.name = taxon_attrs[:name]
-  puts taxon.inspect
+products = { 
+  :ror_tote => "Ruby on Rails Tote",
+  :ror_bag => "Ruby on Rails Bag",
+  :ror_mug => "Ruby on Rails Mug",
+  :ror_stein => "Ruby on Rails Stein",
+  :ror_baseball_jersey => "Ruby on Rails Baseball Jersey",
+  :ror_jr_spaghetti => "Ruby on Rails Jr. Spaghetti",
+  :ror_ringer => "Ruby on Rails Ringer T-Shirt",
+  :spree_stein => "Spree Stein",
+  :spree_mug => "Spree Mug",
+  :spree_ringer => "Spree Ringer T-Shirt",
+  :spree_baseball_jersey =>  "Spree Baseball Jersey",
+  :spree_tote => "Spree Tote",
+  :spree_bag => "Spree Bag",
+  :spree_jr_spaghetti => "Spree Jr. Spaghetti",
+  :apache_baseball_jersey => "Apache Baseball Jersey",
+  :ruby_baseball_jersey => "Ruby Baseball Jersey",
+}
+
+
+products.each do |key, name|
+  products[key] = Spree::Product.find_by_name!(name)
 end
+
+taxons = [
+  {
+    :name => "Categories",
+    :taxonomy => categories,
+    :position => 0
+  },
+  {
+    :name => "Adventure",
+    :taxonomy => categories,
+    :parent => "Categories",
+    :position => 1,
+    :products => [
+      products[:ror_tote],
+      products[:ror_bag],
+      products[:apache_baseball_jersey],
+      products[:spree_bag]
+    ]
+  },
+  {
+    :name => "Sport",
+    :taxonomy => categories,
+    :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_stein],
+      products[:ror_baseball_jersey],
+      products[:spree_bag]
+    ]
+  },
+ 
+  {
+    :name => "Backcountry Skiing",
+    :taxonomy => categories,
+    :parent => "Sport",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_stein],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Surfing",
+    :taxonomy => categories,
+    :parent => "Sport",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:apache_baseball_jersey],
+      products[:spree_bag],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Swimming",
+    :taxonomy => categories,
+    :parent => "Sport",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:spree_jr_spaghetti],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Waterskiing",
+    :taxonomy => categories,
+    :parent => "Sport",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_stein],
+      products[:spree_stein],
+      products[:apache_baseball_jersey]
+    ]
+  },
+  {
+    :name => "Sailing",
+    :taxonomy => categories,
+    :parent => "Sport",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_stein],
+      products[:spree_bag],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Wakeboarding",
+    :taxonomy => categories,
+    :parent => "Sport",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:apache_baseball_jersey],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Mountain Biking",
+    :taxonomy => categories,
+    :parent => "Sport",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_stein],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Boat Excursion",
+    :taxonomy => categories,
+    :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:spree_jr_spaghetti],
+      products[:ror_stein],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Desert Excursion",
+    :taxonomy => categories,
+    :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:spree_bag],
+      products[:ror_stein],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Fishing",
+    :taxonomy => categories,
+    :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_baseball_jersey],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Hiking",
+    :taxonomy => categories,
+    :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_baseball_jersey],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Hunting",
+    :taxonomy => categories,
+    :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_stein],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Safari",
+    :taxonomy => categories,
+    :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:spree_jr_spaghetti],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Scuba Diving",
+    :taxonomy => categories,
+    :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:spree_bag],
+      products[:ror_baseball_jersey],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Recreation",
+    :taxonomy => categories,
+    :parent => "Categories",
+    :position => 1,
+    :products => [
+      products[:ror_tote],
+      products[:ror_bag],
+      products[:spree_tote],
+      products[:spree_bag]
+    ]
+  },
+  {
+    :name => "Dancing",
+    :taxonomy => categories,
+    :parent => "Recreation",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:spree_jr_spaghetti],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Sightseeing",
+    :taxonomy => categories,
+    :parent => "Recreation",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_stein],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Relaxation",
+    :taxonomy => categories,
+    :parent => "Categories",
+    :position => 1,
+    :products => [
+      products[:ror_tote],
+      products[:ror_bag],
+      products[:spree_tote],
+      products[:spree_bag]
+    ]
+  },
+  {
+    :name => "Tai Chi",
+    :taxonomy => categories,
+    :parent => "Relaxation",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_stein],
+      products[:spree_stein],
+      products[:spree_jr_spaghetti]
+    ]
+  },
+  {
+    :name => "Yoga",
+    :taxonomy => categories,
+    :parent => "Relaxation",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_stein],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Reiki",
+    :taxonomy => categories,
+    :parent => "Relaxation",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_stein],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+ {
+    :name => "Pilates",
+    :taxonomy => categories,
+    :parent => "Relaxation",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_stein],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+]
+
+
+taxons.each do |taxon_attrs|
+  if taxon_attrs[:parent]
+    taxon_attrs[:parent] = Spree::Taxon.find_by_name!(taxon_attrs[:parent])
+    Spree::Taxon.create!(taxon_attrs)
+  end
+end
+     
