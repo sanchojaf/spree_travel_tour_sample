@@ -9,20 +9,42 @@ module SpreeTravelTourSample
     # Needs to be here so we can access it inside the tests
     def self.load_travel_tour_samples
         
-      Spree::TravelTourSample.load_travel_tour_sample("option_types")
-      Spree::TravelTourSample.load_travel_tour_sample("option_values")
+      Spree::TravelTourSample.load_travel_tour_sample("payment_methods")
+      Spree::TravelTourSample.load_travel_tour_sample("shipping_categories")
+      Spree::TravelTourSample.load_travel_tour_sample("shipping_methods")
+      Spree::TravelTourSample.load_travel_tour_sample("tax_categories")
+      Spree::TravelTourSample.load_travel_tour_sample("tax_rates")
 
-      Spree::TravelTourSample.load_travel_tour_sample("property_types")      
+      Spree::TravelTourSample.load_travel_tour_sample("products")
+       Spree::TravelTourSample.load_travel_tour_sample("taxonomy_categories") 
+      Spree::TravelTourSample.load_travel_tour_sample("taxon_category")
+      Spree::TravelTourSample.load_travel_tour_sample("option_values")
+      Spree::TravelTourSample.load_travel_tour_sample("product_option_types")
+      Spree::TravelTourSample.load_travel_tour_sample("product_properties")
+      Spree::TravelTourSample.load_travel_tour_sample("properties_tour")
+      Spree::TravelTourSample.load_travel_tour_sample("variants")
+      Spree::TravelTourSample.load_travel_tour_sample("stock")
+      Spree::TravelTourSample.load_travel_tour_sample("assets")
+
+      Spree::TravelTourSample.load_travel_tour_sample("orders")
+      Spree::TravelTourSample.load_travel_tour_sample("adjustments")
+      Spree::TravelTourSample.load_travel_tour_sample("payments")
+    
+
+#      Spree::TravelTourSample.load_travel_tour_sample("option_types")
+#      Spree::TravelTourSample.load_travel_tour_sample("option_values")
+
+#      Spree::TravelTourSample.load_travel_tour_sample("property_types")      
 #      Spree::TravelTourSample.load_travel_tour_sample("properties_flight")
 #      Spree::TravelTourSample.load_travel_tour_sample("properties_hotel")
 #      Spree::TravelTourSample.load_travel_tour_sample("properties_program")
 #      Spree::TravelTourSample.load_travel_tour_sample("properties_rent_a_car")
-      Spree::TravelTourSample.load_travel_tour_sample("properties_tour")
+#      Spree::TravelTourSample.load_travel_tour_sample("properties_tour")
 #      Spree::TravelTourSample.load_travel_tour_sample("properties_transfer")
-      Spree::TravelTourSample.load_travel_tour_sample("shipping_categories")  
-      Spree::TravelTourSample.load_travel_tour_sample("products")  
-      Spree::TravelTourSample.load_travel_tour_sample("taxonomy_categories")      
-      Spree::TravelTourSample.load_travel_tour_sample("taxon_category")
+#      Spree::TravelTourSample.load_travel_tour_sample("shipping_categories")  
+#      Spree::TravelTourSample.load_travel_tour_sample("products")  
+#      Spree::TravelTourSample.load_travel_tour_sample("taxonomy_categories")      
+#      Spree::TravelTourSample.load_travel_tour_sample("taxon_category")
 
 #      Spree::TravelTourSample.load_travel_tour_sample("taxons_hotel")
 #      Spree::TravelTourSample.load_travel_tour_sample("taxons_flight")            
@@ -44,12 +66,12 @@ module SpreeTravelTourSample
      
 
 
-      Spree::TravelTourSample.load_travel_tour_sample("product_properties")
-      Spree::TravelTourSample.load_travel_tour_sample("product_option_types")    
+#      Spree::TravelTourSample.load_travel_tour_sample("product_properties")
+#      Spree::TravelTourSample.load_travel_tour_sample("product_option_types")    
 
-      Spree::TravelTourSample.load_travel_tour_sample("variants")    
+#      Spree::TravelTourSample.load_travel_tour_sample("variants")    
       
-      Spree::TravelTourSample.load_travel_tour_sample("assets")    
+#      Spree::TravelTourSample.load_travel_tour_sample("assets")    
            
 
     end
