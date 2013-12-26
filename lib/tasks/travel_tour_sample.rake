@@ -17,7 +17,7 @@ Migrations have been run. Please run "rake spree_travel_tour_sample:load" by its
       exit(1)
     end
 
-    SpreeTravelTourSample::Engine.load_travel__tour_samples
+    SpreeTravelTourSample::Engine.load_travel_tour_samples
   end
 end
 
