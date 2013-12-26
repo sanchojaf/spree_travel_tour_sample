@@ -42,7 +42,6 @@ module SpreeTravelTourSample
 
 #      Spree::TravelTourSample.load_travel_tour_sample("option_types")
 #      Spree::TravelTourSample.load_travel_tour_sample("option_values")
-
 #      Spree::TravelTourSample.load_travel_tour_sample("property_types")      
 #      Spree::TravelTourSample.load_travel_tour_sample("properties_flight")
 #      Spree::TravelTourSample.load_travel_tour_sample("properties_hotel")
@@ -54,14 +53,12 @@ module SpreeTravelTourSample
 #      Spree::TravelTourSample.load_travel_tour_sample("products")  
 #      Spree::TravelTourSample.load_travel_tour_sample("taxonomy_categories")      
 #      Spree::TravelTourSample.load_travel_tour_sample("taxon_category")
-
 #      Spree::TravelTourSample.load_travel_tour_sample("taxons_hotel")
 #      Spree::TravelTourSample.load_travel_tour_sample("taxons_flight")            
 #      Spree::TravelTourSample.load_travel_tour_sample("taxons_program")      
 #      Spree::TravelTourSample.load_travel_tour_sample("taxons_tour")
 #      Spree::TravelTourSample.load_travel_tour_sample("taxons_transfer")
-#      Spree::TravelTourSample.load_travel_tour_sample("taxons_car_rental")
-            
+#      Spree::TravelTourSample.load_travel_tour_sample("taxons_car_rental")      
 #      Spree::TravelTourSample.load_travel_tour_sample("taxonomy_destinations")
 #      Spree::TravelTourSample.load_travel_tour_sample("taxons_destination")
       
@@ -70,12 +67,8 @@ module SpreeTravelTourSample
       
 #      Spree::TravelTourSample.load_travel_tour_sample("taxonomy_things_to_do")
 #      Spree::TravelTourSample.load_travel_tour_sample("taxons_thing_to_do")      
-
       #temporal because shipping category is a required field to Product model
-     
-
-
-#      Spree::TravelTourSample.load_travel_tour_sample("product_properties")
+     #      Spree::TravelTourSample.load_travel_tour_sample("product_properties")
 #      Spree::TravelTourSample.load_travel_tour_sample("product_option_types")    
 
 #      Spree::TravelTourSample.load_travel_tour_sample("variants")    
