@@ -30,7 +30,7 @@ Spree::Property.create!([
 	{
 		presentation: 'Duration',
 		name: 'tours-duration',
-		property_type: tors_feature
+		property_type: tours_feature
 	},
 	{
 		presentation: 'Start time',
