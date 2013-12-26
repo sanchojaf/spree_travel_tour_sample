@@ -15,7 +15,7 @@ module SpreeTravelTourSample
       Spree::TravelTourSample.load_travel_tour_sample("tax_categories")
       Spree::TravelTourSample.load_travel_tour_sample("tax_rates")
 
-      Spree::TravelTourSample.load_travel_tour_sample("property_types") 
+#      Spree::TravelTourSample.load_travel_tour_sample("property_types") 
       Spree::TravelTourSample.load_travel_tour_sample("properties_tour")
 
       Spree::TravelTourSample.load_travel_tour_sample("products")
