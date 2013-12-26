@@ -1,6 +1,5 @@
 #encoding: utf-8
-tours_feature    = Spree::PropertyType.find_by_name!("Tours Feature")
-
+tours_feature  = Spree::PropertyType.find_by_name!("Tours Feature")
 
 Spree::Property.create!([
 	{
@@ -29,22 +28,17 @@ Spree::Property.create!([
 		property_type: tours_feature
 	},
 	{
-		presentation: 'Vestuario',
-		name: 'tours-vestuario',
-		property_type: tours_feature
-	},
-	{
-		presentation: 'Duración',
+		presentation: 'Duration',
 		name: 'tours-duration',
-		property_type: tours_feature
+		property_type: tors_feature
 	},
 	{
-		presentation: 'Hora de incicio',
+		presentation: 'Start time',
 		name: 'tours-start-time',
 		property_type: tours_feature
 	},
 	{
-		presentation: 'Hora de incicio',
+		presentation: 'End time',
 		name: 'tours-end-time',
 		property_type: tours_feature
 	}
