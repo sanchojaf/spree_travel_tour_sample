@@ -23,6 +23,9 @@ module SpreeTravelTourSample
       Spree::TravelTourSample.load_travel_tour_sample("taxonomy_categories") 
       Spree::TravelTourSample.load_travel_tour_sample("taxon_category")
 
+      Spree::TravelTourSample.load_travel_tour_sample("taxonomy_destinations")
+      Spree::TravelTourSample.load_travel_tour_sample("taxons_destination")
+
       Spree::TravelTourSample.load_travel_tour_sample("option_types")
       Spree::TravelTourSample.load_travel_tour_sample("option_values")
 
@@ -59,8 +62,6 @@ module SpreeTravelTourSample
 #      Spree::TravelTourSample.load_travel_tour_sample("taxons_tour")
 #      Spree::TravelTourSample.load_travel_tour_sample("taxons_transfer")
 #      Spree::TravelTourSample.load_travel_tour_sample("taxons_car_rental")      
-#      Spree::TravelTourSample.load_travel_tour_sample("taxonomy_destinations")
-#      Spree::TravelTourSample.load_travel_tour_sample("taxons_destination")
       
 #      Spree::TravelTourSample.load_travel_tour_sample("taxonomy_flight_destinations")
 #      Spree::TravelTourSample.load_travel_tour_sample("taxons_flight_destination")
