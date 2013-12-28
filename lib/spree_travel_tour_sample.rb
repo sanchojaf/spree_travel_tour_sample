@@ -38,8 +38,8 @@ module SpreeTravelTourSample
       Spree::TravelTourSample.load_travel_tour_sample("assets")
 
       Spree::TravelTourSample.load_travel_tour_sample("addresses")
-      #Spree::TravelTourSample.load_travel_tour_sample("orders")
-      #Spree::TravelTourSample.load_travel_tour_sample("adjustments")
+      Spree::TravelTourSample.load_travel_tour_sample("orders")
+      Spree::TravelTourSample.load_travel_tour_sample("adjustments")
       Spree::TravelTourSample.load_travel_tour_sample("payments")
     
 

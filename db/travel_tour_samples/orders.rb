@@ -1,4 +1,4 @@
-#Spree::Sample.load_sample("addresses")
+Spree::Sample.load_sample("addresses")
 
 orders = []
 orders << Spree::Order.create!(
