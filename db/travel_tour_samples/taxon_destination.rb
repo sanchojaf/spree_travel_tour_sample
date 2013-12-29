@@ -23,13 +23,16 @@ products = {
 taxons = [
   {
     :name => "Destinations",
-    :taxonomy => destinations,
+    :taxonomy => destinations
   },
   {
     :name => "Mexico",
     :taxonomy => destinations,
-    :parent => "Destinations",
+    :parent => "Destinations"
   },
+]
+
+taxons_2 = [
   {
     :name => "Cancun",
     :taxonomy => destinations,
@@ -42,7 +45,7 @@ taxons = [
   {
     :name => "Costa Rica",
     :taxonomy => destinations,
-    :parent => "Destinations",
+    :parent => "Destinations"
   },
 
   {
@@ -51,45 +54,41 @@ taxons = [
     :parent => "Costa Rica",
     :products => [
       products[:ror_mug],
-      products[:ror_stein],
+      products[:ror_stein]
     ]
   },
   {
     :name => "Unied Stated",
     :taxonomy => destinations,
-    :parent => "Destinations",
+    :parent => "Destinations"
   },
-
   {
     :name => "New York",
     :taxonomy => destinations,
     :parent => "Unied Stated",
     :products => [
       products[:ror_baseball_jersey],
-      products[:ror_jr_spaghetti],
-
+      products[:ror_jr_spaghetti]
     ]
   },
   {
     :name => "Venezuela",
     :taxonomy => destinations,
-    :parent => "Destinations",
+    :parent => "Destinations"
   },
-
   {
     :name => "Caracas",
     :taxonomy => destinations,
     :parent => "Venezuela",
     :products => [
       products[:ror_ringer],
-      products[:spree_baseball_jersey],
-
+      products[:spree_baseball_jersey]
     ]
   },
   {
     :name => "Nicaragua",
     :taxonomy => destinations,
-    :parent => "Destinations",
+    :parent => "Destinations"
   },
 
   {
@@ -98,13 +97,13 @@ taxons = [
     :parent => "Nicaragua",
     :products => [
       products[:spree_tote],
-      products[:spree_bag],
+      products[:spree_bag]
     ]
   },
   {
     :name => "New Zealand",
     :taxonomy => destinations,
-    :parent => "Destinations",
+    :parent => "Destinations"
   },
   {
     :name => "Wellintong",
@@ -113,7 +112,7 @@ taxons = [
     :products => [
       products[:spree_jr_spaghetti],
       products[:apache_baseball_jersey],
-      products[:ruby_baseball_jersey],
+      products[:ruby_baseball_jersey]
     ]
   },
 ]  
