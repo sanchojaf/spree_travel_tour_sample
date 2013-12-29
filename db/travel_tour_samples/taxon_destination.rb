@@ -24,85 +24,99 @@ taxons = [
   {
     :name => "Destinations",
     :taxonomy => destinations,
-    :position => 0
   },
   {
     :name => "Mexico",
     :taxonomy => destinations,
     :parent => "Destinations",
-    :position => 1,
-    :products => [
-      products[:spree_ringer],
-      products[:ror_bag],
-      products[:apache_baseball_jersey],
-      products[:spree_bag]
-    ]
   },
   {
     :name => "Cancun",
     :taxonomy => destinations,
     :parent => "Mexico",
-    :position => 2,
     :products => [
-      products[:ror_mug],
-      products[:ror_stein],
-      products[:ror_baseball_jersey],
-      products[:spree_bag]
+      products[:ror_tote],
+      products[:ror_bag],
     ]
   },
   {
     :name => "Costa Rica",
     :taxonomy => destinations,
     :parent => "Destinations",
-    :position => 1,
-    :products => [
-      products[:ror_tote],
-      products[:spree_ringer],
-      products[:apache_baseball_jersey],
-      products[:ror_jr_spaghetti]
-    ]
   },
 
   {
     :name => "San Jose",
     :taxonomy => destinations,
     :parent => "Costa Rica",
-    :position => 2,
     :products => [
       products[:ror_mug],
       products[:ror_stein],
-      products[:ror_baseball_jersey],
-      products[:spree_bag]
     ]
   },
   {
     :name => "Unied Stated",
     :taxonomy => destinations,
     :parent => "Destinations",
-    :position => 1,
-    :products => [
-      products[:ror_tote],
-      products[:ror_bag],
-      products[:apache_baseball_jersey],
-      products[:spree_bag]
-    ]
   },
 
   {
     :name => "New York",
     :taxonomy => destinations,
     :parent => "Unied Stated",
-    :position => 2,
     :products => [
-      products[:ror_mug],
-      products[:apache_baseball_jersey],
+      products[:ror_baseball_jersey],
       products[:ror_jr_spaghetti],
-      products[:spree_mug]
+
     ]
   },
+  {
+    :name => "Venezuela",
+    :taxonomy => destinations,
+    :parent => "Destinations",
+  },
 
+  {
+    :name => "Caracas",
+    :taxonomy => destinations,
+    :parent => "Venezuela",
+    :products => [
+      products[:ror_ringer],
+      products[:spree_baseball_jersey],
+
+    ]
+  },
+  {
+    :name => "Nicaragua",
+    :taxonomy => destinations,
+    :parent => "Destinations",
+  },
+
+  {
+    :name => "Managua",
+    :taxonomy => destinations,
+    :parent => "Nicaragua",
+    :products => [
+      products[:spree_tote],
+      products[:spree_bag],
+    ]
+  },
+  {
+    :name => "New Zealand",
+    :taxonomy => destinations,
+    :parent => "Destinations",
+  },
+  {
+    :name => "Wellintong",
+    :taxonomy => destinations,
+    :parent => "New Zealand",
+    :products => [
+      products[:spree_jr_spaghetti],
+      products[:apache_baseball_jersey],
+      products[:ruby_baseball_jersey],
+    ]
+  },
 ]  
-  
 
 taxons.each do |taxon_attrs|
   if taxon_attrs[:parent]
