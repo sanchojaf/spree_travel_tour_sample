@@ -1,6 +1,6 @@
 #encoding: utf-8
 categories = Spree::Taxonomy.find_by_name!("Categories")
-brands = Spree::Taxonomy.find_by_name!("Brand")
+destinations = Spree::Taxonomy.find_by_name!("Destinations")
 
 products = { 
   :ror_tote => "Ruby on Rails Tote",
@@ -144,7 +144,7 @@ taxons = [
   {
     :name => "Boat Excursion",
     :taxonomy => categories,
-    :parent => "Adventure",
+    :parent => "Adventure",Apache
     :position => 2,
     :products => [
       products[:spree_jr_spaghetti],
@@ -321,32 +321,33 @@ taxons = [
       products[:spree_mug]
     ]
   },
-
-
   {
-    :name => "Brands",
-    :taxonomy => brands
+    :name => "Destinations",
+    :taxonomy => destinations
   },
   {
-    :name => "Ruby",
-    :taxonomy => brands,
-    :parent => "Brand",
-    :products => [
-      products[:ruby_baseball_jersey]
-    ]
+    :name => "Costa Rica",
+    :taxonomy => destinations,
+    :parent => "Destinations",
   },
   {
-    :name => "Apache",
-    :taxonomy => brands,
-    :parent => "Brand",
+    :name => "San Juan",
+    :taxonomy => destinations,
+    :parent => "Costa Rica",
     :products => [
       products[:apache_baseball_jersey]
     ]
   },
   {
-    :name => "Spree",
-    :taxonomy => brands,
-    :parent => "Brand",
+    :name => "Nicaragua",
+    :taxonomy => destinations,
+    :parent => "Destinations",
+  },
+
+  {
+    :name => "Managua",
+    :taxonomy => destinations,
+    :parent => "Nicaragua",
     :products => [
       products[:spree_stein],
       products[:spree_mug],
@@ -358,9 +359,14 @@ taxons = [
     ]
   },
   {
-    :name => "Rails",
-    :taxonomy => brands,
-    :parent => "Brand",
+    :name => "Unied Stated",
+    :taxonomy => destinations,
+    :parent => "Destinations",
+  },
+  {
+    :name => "New York",
+    :taxonomy => destinations,
+    :parent => "Unied Stated",
     :products => [
       products[:ror_tote],
       products[:ror_bag],
