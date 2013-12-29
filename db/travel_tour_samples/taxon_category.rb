@@ -144,7 +144,7 @@ taxons = [
   {
     :name => "Boat Excursion",
     :taxonomy => categories,
-    :parent => "Adventure",Apache
+    :parent => "Adventure",
     :position => 2,
     :products => [
       products[:spree_jr_spaghetti],
