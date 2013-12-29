@@ -23,8 +23,8 @@ module SpreeTravelTourSample
       Spree::TravelTourSample.load_travel_tour_sample("taxonomy_categories") 
       Spree::TravelTourSample.load_travel_tour_sample("taxon_category")
 
-      Spree::TravelTourSample.load_travel_tour_sample("taxonomy_destinations")
-      Spree::TravelTourSample.load_travel_tour_sample("taxon_destination")
+     # Spree::TravelTourSample.load_travel_tour_sample("taxonomy_destinations")
+     # Spree::TravelTourSample.load_travel_tour_sample("taxon_destination")
 
       Spree::TravelTourSample.load_travel_tour_sample("option_types")
       Spree::TravelTourSample.load_travel_tour_sample("option_values")
