@@ -29,16 +29,7 @@ taxons = [
     :name => "Mexico",
     :taxonomy => destinations,
     :parent => "Destinations"
-  },
-  {
-    :name => "Cancun",
-    :taxonomy => destinations,
-    :parent => "Mexico",
-    :products => [
-      products[:ror_tote],
-      products[:ror_bag],
-    ]
-  },
+  }
 
 ]
 
