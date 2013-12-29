@@ -30,9 +30,6 @@ taxons = [
     :taxonomy => destinations,
     :parent => "Destinations"
   },
-]
-
-taxons_2 = [
   {
     :name => "Cancun",
     :taxonomy => destinations,
@@ -57,6 +54,10 @@ taxons_2 = [
       products[:ror_stein]
     ]
   },
+
+]
+
+taxons_2 = [
   {
     :name => "Unied Stated",
     :taxonomy => destinations,
