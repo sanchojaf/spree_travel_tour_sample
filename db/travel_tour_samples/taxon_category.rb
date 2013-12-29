@@ -1,5 +1,6 @@
 #encoding: utf-8
 categories = Spree::Taxonomy.find_by_name!("Categories")
+brands = Spree::Taxonomy.find_by_name!("Brand")
 
 products = { 
   :ror_tote => "Ruby on Rails Tote",
