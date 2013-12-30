@@ -45,9 +45,93 @@ taxons = [
     ]
   },
   {
-    :name => "Sport",
+    :name => "Boat Excursion",
     :taxonomy => categories,
     :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:spree_jr_spaghetti],
+      products[:ror_stein],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Desert Excursion",
+    :taxonomy => categories,
+    :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:spree_bag],
+      products[:ror_stein],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Fishing",
+    :taxonomy => categories,
+    :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_baseball_jersey],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Hiking",
+    :taxonomy => categories,
+    :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_baseball_jersey],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Hunting",
+    :taxonomy => categories,
+    :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:ror_stein],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Safari",
+    :taxonomy => categories,
+    :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:spree_jr_spaghetti],
+      products[:spree_stein],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Scuba Diving",
+    :taxonomy => categories,
+    :parent => "Adventure",
+    :position => 2,
+    :products => [
+      products[:ror_mug],
+      products[:spree_bag],
+      products[:ror_baseball_jersey],
+      products[:spree_mug]
+    ]
+  },
+  {
+    :name => "Sport",
+    :taxonomy => categories,
+    :parent => "Categories",
     :position => 2,
     :products => [
       products[:ror_mug],
@@ -141,90 +225,7 @@ taxons = [
       products[:spree_mug]
     ]
   },
-  {
-    :name => "Boat Excursion",
-    :taxonomy => categories,
-    :parent => "Adventure",
-    :position => 2,
-    :products => [
-      products[:spree_jr_spaghetti],
-      products[:ror_stein],
-      products[:spree_stein],
-      products[:spree_mug]
-    ]
-  },
-  {
-    :name => "Desert Excursion",
-    :taxonomy => categories,
-    :parent => "Adventure",
-    :position => 2,
-    :products => [
-      products[:spree_bag],
-      products[:ror_stein],
-      products[:spree_stein],
-      products[:spree_mug]
-    ]
-  },
-  {
-    :name => "Fishing",
-    :taxonomy => categories,
-    :parent => "Adventure",
-    :position => 2,
-    :products => [
-      products[:ror_mug],
-      products[:ror_baseball_jersey],
-      products[:spree_stein],
-      products[:spree_mug]
-    ]
-  },
-  {
-    :name => "Hiking",
-    :taxonomy => categories,
-    :parent => "Adventure",
-    :position => 2,
-    :products => [
-      products[:ror_mug],
-      products[:ror_baseball_jersey],
-      products[:spree_stein],
-      products[:spree_mug]
-    ]
-  },
-  {
-    :name => "Hunting",
-    :taxonomy => categories,
-    :parent => "Adventure",
-    :position => 2,
-    :products => [
-      products[:ror_mug],
-      products[:ror_stein],
-      products[:spree_stein],
-      products[:spree_mug]
-    ]
-  },
-  {
-    :name => "Safari",
-    :taxonomy => categories,
-    :parent => "Adventure",
-    :position => 2,
-    :products => [
-      products[:ror_mug],
-      products[:spree_jr_spaghetti],
-      products[:spree_stein],
-      products[:spree_mug]
-    ]
-  },
-  {
-    :name => "Scuba Diving",
-    :taxonomy => categories,
-    :parent => "Adventure",
-    :position => 2,
-    :products => [
-      products[:ror_mug],
-      products[:spree_bag],
-      products[:ror_baseball_jersey],
-      products[:spree_mug]
-    ]
-  },
+
   {
     :name => "Recreation",
     :taxonomy => categories,
