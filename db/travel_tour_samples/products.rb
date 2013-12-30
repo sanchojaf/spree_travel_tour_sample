@@ -1,10 +1,10 @@
 shipping_category = Spree::ShippingCategory.find_by_name!("Default")
 
-activity_detail = Spree::ActivityDetail.new({:duration => "#{3 + rand(5)} hours"
-                                                })
+activity_detail = Spree::ActivityDetail.new
+activity_detail."#{3 + rand(5)} hours"
 activity_detail.save
 
-puts "/////////////////////////////// activity_detail = {activity_detail.inspect} //////////////"
+puts "/////////////////////////////// activity_detail = #{activity_detail.inspect} //////////////"
 
 default_attrs = { 
   :activity_detail => activity_detail,
