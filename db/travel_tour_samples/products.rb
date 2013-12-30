@@ -113,13 +113,13 @@ products.each do |product_attrs|
 #  product.reload
 #  product.price = eur_price
   product.shipping_category = default_shipping_category
-
-  activity_detail = Spree::ActivityDetail.create!([{:duration => "#{3 + rand(5)} hours", 
-                             :itinerary => Faker::Lorem.paragraph,
-                             :cancellation => Faker::Lorem.paragraph,
-                             :things_to_bring => Faker::Lorem.paragraph,
-                             :pick_up => Faker::Lorem.paragraph
-                            }])
+                   
+  activity_detail = Spree::ActivityDetail.new
+  activity_detail.duration = "#{3 + rand(5)} hours"
+  activity_detail.itinerary = Faker::Lorem.paragraph
+  activity_detail.cancellation = Faker::Lorem.paragraph    
+  activity_detail.things_to_bring = Faker::Lorem.paragraph   
+  activity_detail.pick_up = Faker::Lorem.paragraph   
 
   product.activity_detail = activity_detail
 
