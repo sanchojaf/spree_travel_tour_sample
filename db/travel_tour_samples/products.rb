@@ -114,12 +114,12 @@ products.each do |product_attrs|
 #  product.price = eur_price
   product.shipping_category = default_shipping_category
 
-  activity_detail = create!({:duration => "#{3 + rand(5)} hours", 
+  activity_detail = create!([{:duration => "#{3 + rand(5)} hours", 
                              :itinerary => Faker::Lorem.paragraph,
                              :cancellation => Faker::Lorem.paragraph,
                              :things_to_bring => Faker::Lorem.paragraph,
                              :pick_up => Faker::Lorem.paragraph
-                            })
+                            }])
 
   product.activity_detail = activity_detail
 
