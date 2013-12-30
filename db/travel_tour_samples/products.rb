@@ -1,13 +1,6 @@
 shipping_category = Spree::ShippingCategory.find_by_name!("Default")
 
-activity_detail = Spree::ActivityDetail.new
-activity_detail.duration = "#{3 + rand(5)} hours"
-activity_detail.save
-
-puts "/////////////////////////////// activity_detail = #{activity_detail.inspect} //////////////"
-
-default_attrs = { 
-  :activity_detail => activity_detail,
+default_attrs = {   
   :available_on => Time.zone.now
 }
 
@@ -120,6 +113,16 @@ products.each do |product_attrs|
 #  product.reload
 #  product.price = eur_price
   product.shipping_category = default_shipping_category
+
+  activity_detail = create!({:duration => "#{3 + rand(5)} hours", 
+                             :itinerary => Faker::Lorem.paragraph,
+                             :cancellation => Faker::Lorem.paragraph,
+                             :things_to_bring => Faker::Lorem.paragraph,
+                             :pick_up => Faker::Lorem.paragraph
+                            })
+
+  product.activity_detail = activity_detail
+
   product.save!
 end
 
