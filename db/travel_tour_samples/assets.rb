@@ -142,11 +142,21 @@ images = {
   ],
 }
 
+#products[:ror_baseball_jersey].variants.each do |variant|
+#  color = variant.option_value("tshirt-color").downcase
+#  main_image = image("ror_baseball_jersey_#{color}", "jpg")
+#  variant.images.create!(:attachment => main_image)
+#  back_image = image("ror_baseball_jersey_back_#{color}", "jpg")
+#  if back_image
+#    variant.images.create!(:attachment => back_image)
+#  end
+#end
+
 products[:ror_baseball_jersey].variants.each do |variant|
-  color = variant.option_value("tshirt-color").downcase
-  main_image = image("ror_baseball_jersey_#{color}", "jpg")
+  meal_plan = variant.option_value("meal-plan").downcase
+  main_image = image("ror_baseball_jersey_#{meal_plan}", "jpg")
   variant.images.create!(:attachment => main_image)
-  back_image = image("ror_baseball_jersey_back_#{color}", "jpg")
+  back_image = image("ror_baseball_jersey_back_#{meal_plan}", "jpg")
   if back_image
     variant.images.create!(:attachment => back_image)
   end
