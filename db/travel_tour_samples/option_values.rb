@@ -63,7 +63,7 @@ Spree::OptionValue.create!([
      :option_type => meal_plan
   },
   {
-     :name => "All Inclusive",
+     :name => "All inclusive",
      :presentation => "AI",
      :position => 4,
      :option_type => meal_plan
