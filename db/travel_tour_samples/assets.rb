@@ -154,9 +154,6 @@ images = {
 
 products[:ror_baseball_jersey].variants.each do |variant|
   meal_plan = variant.option_value("meal-plan").downcase
-  puts "//////////meal_plan #{meal_plan.insepct} ///////////////////"
-  meal_plan= meal_plan.tr(' ', '_')
-  puts "//////////meal_plan #{meal_plan.insepct} ///////////////////"
   main_image = image("ror_baseball_jersey_#{meal_plan}", "jpg")
   variant.images.create!(:attachment => main_image)
   back_image = image("ror_baseball_jersey_back_#{meal_plan}", "jpg")
