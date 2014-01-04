@@ -172,8 +172,7 @@ images.each do |variant, attachments|
   end
 end
 
-
-user_admin.icon.create!(:attachment => image("user_1", "jpg"))
-user_jack.icon.create!(:attachment => image("user_2", "jpg")) 
-user_sa.icon.create!(:attachment => image("user_3", "jpg"))
+user_admin.icon = File.open('user_1.jpg', 'rb')
+user_jack.icon = File.open('user_2.jpg', 'rb')
+user_sa.icon = File.open('user_3.jpg', 'rb')
 
