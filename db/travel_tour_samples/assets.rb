@@ -172,9 +172,9 @@ images.each do |variant, attachments|
   end
 end
 
-user_admin.icon = File.open('user_1.jpg', 'rb')
+user_admin.icon = image("user_1", type="jpg")
 user_admin.save
-user_jack.icon = File.open('user_2.jpg', 'rb')
+user_jack.icon =  image("user_2", type="jpg")
 user_jack.save
-user_sa.icon = File.open('user_3.jpg', 'rb')
+user_sa.icon =  image("user_2", type="jpg")
 user_sa.save
