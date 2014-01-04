@@ -172,9 +172,22 @@ images.each do |variant, attachments|
   end
 end
 
-user_admin.icon = image("user_1", type="jpg")
+
+images_path = Pathname.new(File.dirname(__FILE__)) + "images"
+
+puts "Loading images for user admin"
+path = images_path + "user_1.jpg"
+user_admin.icon = File.open(path, 'rb')
 user_admin.save
-user_jack.icon =  image("user_2", type="jpg")
+
+puts "Loading images for user jack"
+path = images_path + "user_2.jpg"
+user_jack.icon = File.open(path, 'rb')
 user_jack.save
-user_sa.icon =  image("user_2", type="jpg")
+
+puts "Loading images for user sa"
+path = images_path + "user_3.jpg"
+user_sa.icon = File.open(path,'rb')
 user_sa.save
+
+
