@@ -1,5 +1,11 @@
 shipping_category = Spree::ShippingCategory.find_by_name!("Default")
 
+
+user_admin = Spree::User.where(:email => "spree@example.com")
+user_jack = Spree::User.where(:email => "jack@g.com")
+user_sa = Spree::User.where(:email => "sa@g.com")
+
+
 default_attrs = {   
   :available_on => Time.zone.now
 }
@@ -10,96 +16,112 @@ products = [
     :shipping_category => shipping_category,
     :price => 15.99,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_sa
   },
   {
     :name => "Ruby on Rails Bag",
     :shipping_category => shipping_category,
     :price => 22.99,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_jack
   },
   {
     :name => "Ruby on Rails Baseball Jersey",
     :shipping_category => shipping_category,
     :price => 17.99,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_sa
   },
   {
     :name => "Ruby on Rails Jr. Spaghetti",
     :shipping_category => shipping_category,
     :price => 23.99,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_jack
   },
   {
     :name => "Ruby on Rails Ringer T-Shirt",
     :shipping_category => shipping_category,
     :price => 25.60,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_sa
   },
   {
     :name => "Ruby Baseball Jersey",
     :shipping_category => shipping_category,
     :price => 29.99,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_jack
   },
   {
     :name => "Apache Baseball Jersey",
     :shipping_category => shipping_category,
     :price => 9.99,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_sa
   },
   {
     :name => "Spree Baseball Jersey",
     :shipping_category => shipping_category,
     :price => 15.75,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_jack
   },
   {
     :name => "Spree Jr. Spaghetti",
     :shipping_category => shipping_category,
     :price => 18.90,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_jack
   },
   {
     :name => "Spree Ringer T-Shirt",
     :shipping_category => shipping_category,
     :price => 21.99,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_sa
   },
   {
     :name => "Spree Tote",
     :shipping_category => shipping_category,
     :price => 15.99,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_sa
   },
   {
     :name => "Spree Bag",
     :shipping_category => shipping_category,
     :price => 12.99,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_sa
   },
   {
     :name => "Ruby on Rails Mug",
     :shipping_category => shipping_category,
     :price => 13.99,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_sa
   },
   {
     :name => "Ruby on Rails Stein",
     :shipping_category => shipping_category,
     :price => 16.99,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_sa
   },
   {
     :name => "Spree Stein",
     :shipping_category => shipping_category,
     :price => 16.99,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_admin
   },
   {
     :name => "Spree Mug",
     :shipping_category => shipping_category,
     :price => 13.99,
     :description => Faker::Lorem.paragraph,
+    :user_id => user_sa
   }
 ]
 

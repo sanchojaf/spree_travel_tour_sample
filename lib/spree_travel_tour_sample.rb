@@ -8,7 +8,8 @@ module SpreeTravelTourSample
 
     # Needs to be here so we can access it inside the tests
     def self.load_travel_tour_samples
-        
+      Spree::TravelTourSample.load_travel_tour_sample("users")      
+  
       Spree::TravelTourSample.load_travel_tour_sample("payment_methods")
       Spree::TravelTourSample.load_travel_tour_sample("shipping_categories")
       Spree::TravelTourSample.load_travel_tour_sample("shipping_methods")

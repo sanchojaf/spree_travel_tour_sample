@@ -43,37 +43,37 @@ variants = [
     :product => ror_baseball_jersey,
     :option_values => [half_day, continental_breakfast ], #small, red, 
     :sku => "ROR-00001",
-    :cost_price => 17
+    :cost_price => 18
   },
   {
     :product => ror_baseball_jersey,
     :option_values => [half_day, american_plan], #small, blue, 
     :sku => "ROR-00002",
-    :cost_price => 17
+    :cost_price => 15
   },
   {
     :product => ror_baseball_jersey,
     :option_values => [half_day, all_inclusive], #small, green, 
     :sku => "ROR-00003",
-    :cost_price => 17
+    :cost_price => 20
   },
   {
     :product => ror_baseball_jersey,
     :option_values => [all_day, continental_breakfast], #medium, red, 
     :sku => "ROR-00004",
-    :cost_price => 17
+    :cost_price => 21
   },
   {
     :product => ror_baseball_jersey,
     :option_values => [all_day, american_plan], #medium, blue, 
     :sku => "ROR-00005",
-    :cost_price => 17
+    :cost_price => 23
   },
   {
     :product => ror_baseball_jersey,
     :option_values => [all_day, all_inclusive], #medium, green, 
     :sku => "ROR-00006",
-    :cost_price => 17
+    :cost_price => 22
   },
   {
     :product => ror_baseball_jersey,
@@ -85,13 +85,13 @@ variants = [
     :product => ror_baseball_jersey,
     :option_values => [week, american_plan], #large, blue, 
     :sku => "ROR-00008",
-    :cost_price => 17
+    :cost_price => 26
   },
   {
     :product => ror_baseball_jersey,
     :option_values => [week, all_inclusive], #large, green, 
     :sku => "ROR-00009",
-    :cost_price => 17
+    :cost_price => 27
   },
   {
     :product => ror_baseball_jersey,
