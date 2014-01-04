@@ -173,6 +173,8 @@ images.each do |variant, attachments|
 end
 
 user_admin.icon = File.open('user_1.jpg', 'rb')
+user_admin.save
 user_jack.icon = File.open('user_2.jpg', 'rb')
+user_jack.save
 user_sa.icon = File.open('user_3.jpg', 'rb')
-
+user_sa.save
