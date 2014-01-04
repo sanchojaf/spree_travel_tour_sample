@@ -21,6 +21,9 @@ products[:spree_bag] = Spree::Product.find_by_name!("Spree Bag")
 products[:ruby_baseball_jersey] = Spree::Product.find_by_name!("Ruby Baseball Jersey")
 products[:apache_baseball_jersey] = Spree::Product.find_by_name!("Apache Baseball Jersey")
 
+user_admin = Spree::User.where(:email => "spree@example.com")
+user_jack = Spree::User.where(:email => "jack@g.com")
+user_sa = Spree::User.where(:email => "sa@g.com")
 
 def image(name, type="jpg")
   images_path = Pathname.new(File.dirname(__FILE__)) + "images"
@@ -168,4 +171,9 @@ images.each do |variant, attachments|
     variant.images.create!(attachment)
   end
 end
+
+
+user_admin.images.create!(:attachment => image("user_1", "jpg"))
+user_jack.images.create!(:attachment => image("user_2", "jpg")) 
+user_sa.images.create!(:attachment => image("user_3", "jpg"))
 
