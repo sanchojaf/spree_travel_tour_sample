@@ -173,7 +173,7 @@ images.each do |variant, attachments|
 end
 
 
-user_admin.images.create!(:attachment => image("user_1", "jpg"))
-user_jack.images.create!(:attachment => image("user_2", "jpg")) 
-user_sa.images.create!(:attachment => image("user_3", "jpg"))
+user_admin.icon.create!(:attachment => image("user_1", "jpg"))
+user_jack.icon.create!(:attachment => image("user_2", "jpg")) 
+user_sa.icon.create!(:attachment => image("user_3", "jpg"))
 
