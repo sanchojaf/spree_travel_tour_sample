@@ -20,6 +20,8 @@ module SpreeTravelTourSample
       Spree::TravelTourSample.load_travel_tour_sample("properties_tour")
 
       Spree::TravelTourSample.load_travel_tour_sample("products")
+      
+      Spree::TravelTourSample.load_travel_tour_sample("product_locations")
 
       Spree::TravelTourSample.load_travel_tour_sample("taxonomy_categories") 
       Spree::TravelTourSample.load_travel_tour_sample("taxon_category")
