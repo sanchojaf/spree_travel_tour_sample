@@ -336,7 +336,9 @@ taxons = [
     :taxonomy => destinations,
     :parent => "Costa Rica",
     :products => [
-      products[:apache_baseball_jersey]
+      products[:apache_baseball_jersey],
+      products[:spree_stein],
+      products[:spree_mug],
     ]
   },
   {
@@ -344,14 +346,11 @@ taxons = [
     :taxonomy => destinations,
     :parent => "Destinations",
   },
-
   {
     :name => "Managua",
     :taxonomy => destinations,
     :parent => "Nicaragua",
     :products => [
-      products[:spree_stein],
-      products[:spree_mug],
       products[:spree_ringer],
       products[:spree_baseball_jersey],
       products[:spree_tote],
@@ -372,6 +371,13 @@ taxons = [
       products[:ror_tote],
       products[:ror_bag],
       products[:ror_mug],
+    ]
+  },
+  {
+    :name => "Orlando",
+    :taxonomy => destinations,
+    :parent => "Unied Stated",
+    :products => [
       products[:ror_stein],
       products[:ror_baseball_jersey],
       products[:ror_jr_spaghetti],
