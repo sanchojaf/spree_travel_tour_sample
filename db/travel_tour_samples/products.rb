@@ -15,112 +15,112 @@ products = [
     :price => 15.99,
     :description => Faker::Lorem.paragraph,
     :user_id => user_sa.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Ruby on Rails Bag",
     :price => 22.99,
     :description => Faker::Lorem.paragraph,
     :user_id => user_jack.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Ruby on Rails Baseball Jersey",
     :price => 17.99,
     :description => Faker::Lorem.paragraph,
     :user_id => user_sa.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Ruby on Rails Jr. Spaghetti",
     :price => 23.99,
     :description => Faker::Lorem.paragraph,
     :user_id => user_jack.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Ruby on Rails Ringer T-Shirt",
     :price => 25.60,
     :description => Faker::Lorem.paragraph,
     :user_id => user_sa.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Ruby Baseball Jersey",
     :price => 29.99,
     :description => Faker::Lorem.paragraph,
     :user_id => user_jack.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Apache Baseball Jersey",
     :price => 9.99,
     :description => Faker::Lorem.paragraph,
     :user_id => user_sa.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Spree Baseball Jersey",
     :price => 15.75,
     :description => Faker::Lorem.paragraph,
     :user_id => user_jack.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Spree Jr. Spaghetti",
     :price => 18.90,
     :description => Faker::Lorem.paragraph,
     :user_id => user_jack.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Spree Ringer T-Shirt",
     :price => 21.99,
     :description => Faker::Lorem.paragraph,
     :user_id => user_sa.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Spree Tote",
     :price => 15.99,
     :description => Faker::Lorem.paragraph,
     :user_id => user_sa.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Spree Bag",
     :price => 12.99,
     :description => Faker::Lorem.paragraph,
     :user_id => user_sa.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Ruby on Rails Mug",
     :price => 13.99,
     :description => Faker::Lorem.paragraph,
     :user_id => user_sa.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Ruby on Rails Stein",
     :price => 16.99,
     :description => Faker::Lorem.paragraph,
     :user_id => user_sa.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Spree Stein",
     :price => 16.99,
     :description => Faker::Lorem.paragraph,
     :user_id => user_admin.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   },
   {
     :name => "Spree Mug",
     :price => 13.99,
     :description => Faker::Lorem.paragraph,
     :user_id => user_sa.first.id, 
-    :shipping_category = default_shipping_category
+    :shipping_category => default_shipping_category
   }
 ]
 
