@@ -21,9 +21,9 @@ products[:spree_bag] = Spree::Product.find_by_name!("Spree Bag")
 products[:ruby_baseball_jersey] = Spree::Product.find_by_name!("Ruby Baseball Jersey")
 products[:apache_baseball_jersey] = Spree::Product.find_by_name!("Apache Baseball Jersey")
 
-user_admin = Spree::User.where(:email => "spree@example.com")
-user_jack = Spree::User.where(:email => "jack@g.com")
-user_sa = Spree::User.where(:email => "sa@g.com")
+user_1 = Spree::User.where(:email => "spree@example.com")[0]
+user_2 = Spree::User.where(:email => "jack@g.com")[0]
+user_3 = Spree::User.where(:email => "sa@g.com")[0]
 
 def image(name, type="jpg")
   images_path = Pathname.new(File.dirname(__FILE__)) + "images"
@@ -172,22 +172,15 @@ images.each do |variant, attachments|
   end
 end
 
+puts "Loading images for user 1"
+user_1.icon = image("user_1")
+user_1.save
 
-images_path = Pathname.new(File.dirname(__FILE__)) + "images"
+puts "Loading images for user 2"
+user_2.icon = image("user_2")
+user_2.save
 
-puts "Loading images for user admin"
-path = images_path + "user_1.jpg"
-user_admin.icon = File.open(path, 'rb')
-user_admin.save
-
-puts "Loading images for user jack"
-path = images_path + "user_2.jpg"
-user_jack.icon = File.open(path, 'rb')
-user_jack.save
-
-puts "Loading images for user sa"
-path = images_path + "user_3.jpg"
-user_sa.icon = File.open(path,'rb')
-user_sa.save
-
+puts "Loading images for user 3"
+user_3.icon = image("user_3")
+user_3.save
 
