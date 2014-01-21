@@ -44,6 +44,9 @@ module SpreeTravelTourSample
       Spree::TravelTourSample.load_travel_tour_sample("orders")
       Spree::TravelTourSample.load_travel_tour_sample("adjustments")
       Spree::TravelTourSample.load_travel_tour_sample("payments")
+
+
+      Spree::TravelTourSample.load_travel_tour_sample("reviews")
     
 
 #      Spree::TravelTourSample.load_travel_tour_sample("option_types")
